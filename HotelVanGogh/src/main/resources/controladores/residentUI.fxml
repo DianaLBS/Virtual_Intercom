@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<!-- TODO Add Nodes -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane layoutX="17.0" layoutY="134.0" prefHeight="531.0" prefWidth="870.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="369.0" prefWidth="355.0" style="-fx-background-color: #215987;">
+               <children>
+                  <AnchorPane layoutX="55.0" layoutY="79.0" prefHeight="60.0" prefWidth="720.0" style="-fx-background-color: #F7D289; -fx-border-color: #ffffff;">
+                     <children>
+                        <Label layoutX="248.0" layoutY="9.0" prefHeight="37.0" prefWidth="241.0" text="Chat With A Resident">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="47.0" fitWidth="35.0" layoutX="201.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/tenant2-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="223.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/tenant2-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <TextArea fx:id="chatScreen" layoutX="55.0" layoutY="217.0" prefHeight="204.0" prefWidth="757.0" style="-fx-border-color: #F7D289;">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" />
+                     </padding>
+                  </TextArea>
+                  <TextField fx:id="message_TF" layoutX="56.0" layoutY="449.0" prefHeight="60.0" prefWidth="579.0" style="-fx-border-color: #F7D289;" />
+                  <Button fx:id="sendMessage" layoutX="663.0" layoutY="451.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="53.0" prefWidth="149.0" style="-fx-background-color: #F7D289; -fx-border-color: #ffffff;" text="Send">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-lleno-enviado-90.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <AnchorPane layoutX="719.0" layoutY="6.0" minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="149.0" style="-fx-background-color: #F7D289; -fx-border-color: #ffffff;">
+                     <children>
+                        <Pane layoutX="-82.0" layoutY="-5.0" prefHeight="47.0" prefWidth="312.0" style="-fx-background-color: #215987; -fx-border-color: #ffffff;">
+                           <children>
+                              <Label layoutX="81.0" layoutY="8.0" prefHeight="35.0" prefWidth="165.0" text="I NEED HELP!" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageSirena" fitHeight="35.0" fitWidth="47.0" layoutX="28.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/SirenaBlanca.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="alert" layoutX="6.0" layoutY="42.0" mnemonicParsing="false" onAction="#PressButtonPanic" prefHeight="119.0" prefWidth="136.0" style="-fx-background-color: #F7D289;">
+                           <graphic>
+                              <ImageView fitHeight="105.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Panic1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="initChat" layoutX="366.0" layoutY="158.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #F7D289; -fx-border-color: #ffffff;" text="Start Chat">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="IPaddressDTF" layoutX="158.0" layoutY="16.0" style="-fx-border-color: #2159 #F7D28987;" />
+                  <Label layoutX="55.0" layoutY="19.0" text="IP Address:" textFill="#f7d289">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="playIP" layoutX="366.0" layoutY="17.0" mnemonicParsing="false" onAction="#actionPlayip" prefHeight="31.0" prefWidth="32.0" style="-fx-background-color: #F7D289;" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Pane layoutX="-3.0" prefHeight="68.0" prefWidth="911.0" style="-fx-background-color: #215987;">
+         <children>
+            <Label fx:id="titleLabel" layoutX="279.0" layoutY="10.0" prefHeight="53.0" prefWidth="280.0" text="Virtual Intercom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="48.0" fitWidth="47.0" layoutX="569.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconT3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="68.0" prefHeight="53.0" prefWidth="241.0" style="-fx-background-color: #F7D289;">
+         <children>
+            <Label layoutX="60.0" layoutY="9.0" text="Tenant">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/tenant2-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -11,9 +11,13 @@ module com.example.hotelvangogh {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.logging;
+    requires java.mail;
+    requires java.desktop;
+    requires activation;
 
-    opens control to javafx.fxml;
+
+    opens controladores to javafx.fxml;
     opens connection to javafx.fxml;
-    exports control;
     exports connection;
+    exports  controladores;
 }

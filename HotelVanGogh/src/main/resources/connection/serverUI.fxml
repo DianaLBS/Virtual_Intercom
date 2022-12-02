@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="37.0" layoutY="33.0" prefHeight="17.0" prefWidth="302.0" text="Servidor Iniciado" />
       <TextArea fx:id="serverRunningTA" layoutX="37.0" layoutY="70.0" prefHeight="297.0" prefWidth="434.0" />
+      <Button layoutX="118.0" layoutY="157.0" mnemonicParsing="false" onAction="#acept" text="Button" />
    </children>
 </AnchorPane>
